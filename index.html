@@ -1,322 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3H7PDPVG3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-X3H7PDPVG3');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rexo Tool - Free Online PDF Tools</title>
-    <meta name="description" content="27 Free Online PDF Tools - Merge, Split, Compress, Convert PDF files instantly. 100% Free & Secure.">
-    <link rel="stylesheet" href="styles.css">
+    
+    <title>Free PDF Tools Online - Merge, Split, Compress, Convert PDFs | All-in-One PDF Editor</title>
+    <meta name="description" content="Free online PDF tools to merge, split, compress, convert, edit, and secure PDF files. 100% privacy guaranteed - all processing happens in your browser. No upload required.">
+    <meta name="keywords" content="free pdf tools, merge pdf, split pdf, compress pdf, pdf to word, pdf editor, pdf converter, protect pdf, unlock pdf, rotate pdf, pdf merger online">
+    <meta name="author" content="PDF Tools Pro">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Free PDF Tools Online - All-in-One PDF Editor">
+    <meta property="og:description" content="Professional PDF tools for merging, splitting, converting, and editing PDFs. 100% free and secure - all processing in your browser.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/FF69B4/FFFFFF?text=PDF+Tools+Pro">
+    <meta property="og:url" content="https://pdftools-pro.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PDF Tools Pro">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free PDF Tools Online - All-in-One PDF Editor">
+    <meta name="twitter:description" content="Merge, split, compress, and convert PDFs online. 100% free and secure.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/FF69B4/FFFFFF?text=PDF+Tools+Pro">
+    
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+    
     <header class="header">
-        <div class="container header-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                    </svg>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>PDF Tools Pro</span>
                 </div>
-                <span class="logo-text">Rexo Tool</span>
-            </a>
-            <nav class="nav">
-                <a href="#tools" class="nav-link">Tools</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#tools" class="mobile-nav-link">Tools</a>
-            <a href="#about" class="mobile-nav-link">About</a>
-            <a href="#contact" class="mobile-nav-link">Contact</a>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="burger-menu" id="burgerMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-                <span>27 Free PDF Tools</span>
-            </div>
-            <h1 class="hero-title">
-                All PDF Tools You Need in
-                <span class="gradient-text">One Place</span>
-            </h1>
-            <p class="hero-description">
-                Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks. 
-                100% free, secure and works directly in your browser.
-            </p>
-            <div class="hero-buttons">
-                <a href="#tools" class="btn btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                    </svg>
-                    Explore Tools
-                </a>
-                <a href="#about" class="btn btn-secondary">
-                    Learn More
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-value">27+</span>
-                    <span class="stat-label">PDF Tools</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">100%</span>
-                    <span class="stat-label">Free Forever</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">Secure</span>
-                    <span class="stat-label">Client-Side</span>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>All-in-One PDF Tools</h1>
+                <p>Professional PDF editing tools right in your browser. 100% free, secure, and private.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Secure</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-bolt"></i>
+                        <span>Lightning Fast</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-lock"></i>
+                        <span>No Upload</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tools Section -->
-    <section class="tools-section" id="tools">
+    <section class="filter-section" id="tools">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">All PDF Tools</h2>
-                <p class="section-description">Select a tool to get started with your PDF task</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th"></i> All Tools
+                </button>
+                <button class="filter-btn" data-category="organize">
+                    <i class="fas fa-folder"></i> Organize
+                </button>
+                <button class="filter-btn" data-category="optimize">
+                    <i class="fas fa-compress"></i> Optimize
+                </button>
+                <button class="filter-btn" data-category="convert">
+                    <i class="fas fa-exchange-alt"></i> Convert
+                </button>
+                <button class="filter-btn" data-category="edit">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button class="filter-btn" data-category="security">
+                    <i class="fas fa-lock"></i> Security
+                </button>
             </div>
-            
-            <!-- Search Bar -->
-            <div class="search-container">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.3-4.3"></path>
-                </svg>
-                <input type="text" class="search-input" id="toolSearch" placeholder="Search tools...">
-            </div>
+        </div>
+    </section>
 
-            <!-- Tools Grid -->
+    <section class="tools-section">
+        <div class="container">
             <div class="tools-grid" id="toolsGrid">
-                <!-- Tools will be dynamically generated -->
+                
+                <div class="tool-card" data-category="organize" data-tool="merge">
+                    <div class="tool-icon">
+                        <i class="fas fa-object-group"></i>
+                    </div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDF files into one document</p>
+                </div>
+
+                <div class="tool-card" data-category="organize" data-tool="split">
+                    <div class="tool-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Split PDF</h3>
+                    <p>Extract pages from your PDF file</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="rotate">
+                    <div class="tool-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Rotate PDF</h3>
+                    <p>Rotate pages in your PDF document</p>
+                </div>
+
+                <div class="tool-card" data-category="optimize" data-tool="compress">
+                    <div class="tool-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce PDF file size while maintaining quality</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="pdf-to-word">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF to editable Word document</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="word-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Word to PDF</h3>
+                    <p>Convert Word documents to PDF format</p>
+                </div>
+
+                <div class="tool-card" data-category="security" data-tool="protect">
+                    <div class="tool-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Protect PDF</h3>
+                    <p>Add password protection to your PDF</p>
+                </div>
+
+                <div class="tool-card" data-category="security" data-tool="unlock">
+                    <div class="tool-icon">
+                        <i class="fas fa-unlock"></i>
+                    </div>
+                    <h3>Unlock PDF</h3>
+                    <p>Remove password from protected PDF</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="page-numbers">
+                    <div class="tool-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Add Page Numbers</h3>
+                    <p>Insert page numbers to your PDF</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="pdf-to-jpg">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>PDF to JPG</h3>
+                    <p>Convert PDF pages to JPG images</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="jpg-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <h3>JPG to PDF</h3>
+                    <p>Convert JPG images to PDF document</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="sign">
+                    <div class="tool-icon">
+                        <i class="fas fa-signature"></i>
+                    </div>
+                    <h3>Sign PDF</h3>
+                    <p>Add your signature to PDF documents</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="watermark">
+                    <div class="tool-icon">
+                        <i class="fas fa-stamp"></i>
+                    </div>
+                    <h3>Watermark PDF</h3>
+                    <p>Add watermark to your PDF files</p>
+                </div>
+
+                <div class="tool-card" data-category="organize" data-tool="organize">
+                    <div class="tool-icon">
+                        <i class="fas fa-sort"></i>
+                    </div>
+                    <h3>Organize Pages</h3>
+                    <p>Reorder, delete, or add PDF pages</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="pdf-to-excel">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>PDF to Excel</h3>
+                    <p>Convert PDF tables to Excel spreadsheet</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="excel-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Excel to PDF</h3>
+                    <p>Convert Excel files to PDF format</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="pdf-to-ppt">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3>PDF to PowerPoint</h3>
+                    <p>Convert PDF to PowerPoint presentation</p>
+                </div>
+
+                <div class="tool-card" data-category="convert" data-tool="ppt-to-pdf">
+                    <div class="tool-icon">
+                        <i class="fas fa-presentation"></i>
+                    </div>
+                    <h3>PowerPoint to PDF</h3>
+                    <p>Convert presentations to PDF format</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="edit">
+                    <div class="tool-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h3>Edit PDF</h3>
+                    <p>Add text, images, and shapes to PDF</p>
+                </div>
+
+                <div class="tool-card" data-category="organize" data-tool="delete-pages">
+                    <div class="tool-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <h3>Delete Pages</h3>
+                    <p>Remove unwanted pages from PDF</p>
+                </div>
+
+                <div class="tool-card" data-category="optimize" data-tool="repair">
+                    <div class="tool-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Repair PDF</h3>
+                    <p>Fix corrupted or damaged PDF files</p>
+                </div>
+
+                <div class="tool-card" data-category="edit" data-tool="ocr">
+                    <div class="tool-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <h3>OCR PDF</h3>
+                    <p>Extract text from scanned PDF documents</p>
+                </div>
+
+                <div class="tool-card" data-category="organize" data-tool="reader">
+                    <div class="tool-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>PDF Reader</h3>
+                    <p>Read and view PDF files online</p>
+                </div>
+
+                <div class="tool-card" data-category="optimize" data-tool="flatten">
+                    <div class="tool-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Flatten PDF</h3>
+                    <p>Merge all layers into one</p>
+                </div>
+
+                <div class="tool-card" data-category="organize" data-tool="extract-images">
+                    <div class="tool-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Extract Images</h3>
+                    <p>Extract all images from PDF file</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
+    <section class="features-section" id="features">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Rexo Tool?</h2>
-                <p class="section-description">The most trusted free PDF solution</p>
-            </div>
+            <h2>Why Choose Our PDF Tools?</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">100% Secure</h3>
-                    <p class="feature-description">All processing happens in your browser. Your files never leave your device.</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Secure</h3>
+                    <p>All processing happens in your browser. Your files never leave your device.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 6v6l4 2"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">No upload wait times. Process PDFs instantly with our optimized algorithms.</p>
+                    <i class="fas fa-bolt"></i>
+                    <h3>Lightning Fast</h3>
+                    <p>No upload or download delays. Instant processing right in your browser.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Always Free</h3>
-                    <p class="feature-description">No hidden fees, no subscriptions. All 27 tools are completely free to use.</p>
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Completely Free</h3>
+                    <p>All tools are 100% free with no hidden fees or subscriptions.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Works Everywhere</h3>
-                    <p class="feature-description">Compatible with all modern browsers. No software installation required.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Works Everywhere</h3>
+                    <p>Use on any device - desktop, tablet, or mobile. No installation needed.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-description">Have questions? We're here to help!</p>
-            </div>
-            <div class="contact-cards">
-                <a href="mailto:rexoagency.in@gmail.com" class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <span class="contact-label">Email</span>
-                    <span class="contact-value">rexoagency.in@gmail.com</span>
-                </a>
-                <a href="tel:+919116965626" class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                    </div>
-                    <span class="contact-label">Phone</span>
-                    <span class="contact-value">+91 9116965626</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <div class="logo-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                            </svg>
-                        </div>
-                        <span class="logo-text">Rexo Tool</span>
-                    </a>
-                    <p class="footer-description">Free online PDF tools for everyone. No registration, no limits.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#tools">All Tools</a>
-                    <a href="#about">About Us</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Popular Tools</h4>
-                    <a href="#" onclick="openTool('merge')">Merge PDF</a>
-                    <a href="#" onclick="openTool('compress')">Compress PDF</a>
-                    <a href="#" onclick="openTool('split')">Split PDF</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rexo Tool. All rights reserved.</p>
-                <p>Made with <span class="heart">❤</span> by Rexo Agency</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Tool Modal -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal" id="toolModal">
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
             <div class="modal-header">
-                <div class="modal-title-wrapper">
-                    <div class="modal-icon" id="modalIcon"></div>
-                    <div>
-                        <h3 class="modal-title" id="modalTitle">Tool Name</h3>
-                        <p class="modal-description" id="modalDescription">Tool description</p>
-                    </div>
-                </div>
-                <button class="modal-close" id="modalClose">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
+                <h2 id="modalTitle">PDF Tool</h2>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Upload Area -->
                 <div class="upload-area" id="uploadArea">
-                    <div class="upload-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="17 8 12 3 7 8"></polyline>
-                            <line x1="12" y1="3" x2="12" y2="15"></line>
-                        </svg>
-                    </div>
-                    <p class="upload-text">Drag & drop your files here</p>
-                    <p class="upload-subtext">or click to browse</p>
-                    <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" hidden>
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drop PDF files here</h3>
+                    <p>or click to browse</p>
+                    <input type="file" id="fileInput" accept="application/pdf" multiple hidden>
+                    <button class="browse-btn" id="browseBtn">Browse Files</button>
                 </div>
-
-                <!-- File List -->
+                
+                <div class="tool-options" id="toolOptions" style="display: none;">
+                    <div class="option-group" id="protectOptions" style="display: none;">
+                        <label for="pdfPassword">Enter Password:</label>
+                        <input type="password" id="pdfPassword" placeholder="Enter password to protect PDF">
+                    </div>
+                    
+                    <div class="option-group" id="unlockOptions" style="display: none;">
+                        <label for="unlockPassword">Enter Password:</label>
+                        <input type="password" id="unlockPassword" placeholder="Enter password to unlock PDF">
+                    </div>
+                    
+                    <div class="option-group" id="rotateOptions" style="display: none;">
+                        <label>Rotation Angle:</label>
+                        <select id="rotateAngle">
+                            <option value="90">90° Clockwise</option>
+                            <option value="180">180°</option>
+                            <option value="270">270° (90° Counter-clockwise)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="option-group" id="pageNumberOptions" style="display: none;">
+                        <label>Position:</label>
+                        <select id="pageNumberPosition">
+                            <option value="bottom-center">Bottom Center</option>
+                            <option value="bottom-right">Bottom Right</option>
+                            <option value="bottom-left">Bottom Left</option>
+                            <option value="top-center">Top Center</option>
+                            <option value="top-right">Top Right</option>
+                            <option value="top-left">Top Left</option>
+                        </select>
+                    </div>
+                </div>
+                
                 <div class="file-list" id="fileList"></div>
-
-                <!-- Tool Options -->
-                <div class="tool-options" id="toolOptions"></div>
-
-                <!-- Progress Bar -->
-                <div class="progress-container" id="progressContainer">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                    <p class="progress-text" id="progressText">Processing...</p>
+                
+                <div class="progress-bar" id="progressBar" style="display: none;">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <span class="progress-text" id="progressText">Processing...</span>
                 </div>
-
-                <!-- Result Area -->
-                <div class="result-area" id="resultArea">
-                    <div class="result-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    <p class="result-text">Processing complete!</p>
-                    <button class="btn btn-primary download-btn" id="downloadBtn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download
-                    </button>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" id="resetBtn">Reset</button>
-                <button class="btn btn-primary" id="processBtn" disabled>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                    Process
+                
+                <button class="process-btn" id="processBtn" disabled>
+                    <i class="fas fa-cog"></i> Process & Download
                 </button>
             </div>
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PDF Tools Pro</h3>
+                    <p>Your trusted companion for all PDF operations. Fast, secure, and completely free.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            <div class="footer-section">
+                    <h4>Popular Tools</h4>
+                    <ul>
+                        <li><a href="#" data-tool="merge">Merge PDF</a></li>
+                        <li><a href="#" data-tool="split">Split PDF</a></li>
+                        <li><a href="#" data-tool="compress">Compress PDF</a></li>
+                        <li><a href="#" data-tool="protect">Protect PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PDF Tools Pro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>
+       
